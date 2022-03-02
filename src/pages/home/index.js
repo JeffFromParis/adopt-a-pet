@@ -2,10 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { getPets } from '../../api/petfinder';
 import Hero from '../../components/hero';
 import Pet from '../../components/pet';
+import { useParams } from 'react-router-dom';
 
 const HomePage = () => {
   const [data, setData] = useState(null);
-  const type = ''; // Fix me!
+  
+  //Added by me !
+  //I'm using useParams to get the value of the param 'title'
+  const { title } = useParams(); //title ici dopit faire reference au nom du paramètre entre dans l'attribut path de la route (voir app.js)
+  // console.log('type is ' + title);
+  const type = title;
 
   useEffect(() => {
     async function getPetsData() {
