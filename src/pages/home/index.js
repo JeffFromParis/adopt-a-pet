@@ -9,9 +9,8 @@ const HomePage = () => {
   
   //Added by me !
   //I'm using useParams to get the value of the param 'title'
-  const { title } = useParams(); //title ici dopit faire reference au nom du paramètre entre dans l'attribut path de la route (voir app.js)
+  const { type } = useParams(); //title ici dopit faire reference au nom du paramètre entre dans l'attribut path de la route (voir app.js)
   // console.log('type is ' + title);
-  const type = title;
 
   useEffect(() => {
     async function getPetsData() {
