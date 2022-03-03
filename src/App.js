@@ -9,7 +9,10 @@ function App() {
   return (
     <Router>
       <Navigation />
-      <Switch>
+      <Switch>  
+        <Route path='/pet-details-not-found'>
+          <PetDetailsNotFound />
+        </Route>
         <Route path='/search'>
           <SearchPage />
         </Route>
